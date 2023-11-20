@@ -1,7 +1,5 @@
 # Introdução ao Streamlit
 
-![Logotipo do Streamlit](https://www.streamlit.io/images/brand/streamlit-logo-color.png)
-
 ## O que é o Streamlit?
 
 O Streamlit é uma biblioteca de código aberto em Python que se destaca como uma ferramenta poderosa para criar aplicativos web interativos de maneira rápida e fácil. Ele foi projetado por engenheiros egressos do Google para atender às demandas de cientistas de dados e engenheiros de software que desejavam compartilhar suas análises, visualizações e modelos com um público mais amplo, sem a complexidade comum ao desenvolvimento web ou as limitações de um Jupyter Notebook rodando em ambientes não controlados.
