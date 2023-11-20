@@ -6,4 +6,5 @@ services:
     ports:
       - "8501:8501"  # Mapeie a porta do container para a porta do host
     volumes:
-      - ./app:/app  # Mapeie o diretório de código local para o diretório de trabalho no container
+      - ./app.py:/app/app.py  # Mapeie o arquivo app.py local diretamente para o diretório de trabalho no container
+
