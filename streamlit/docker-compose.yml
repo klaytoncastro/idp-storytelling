@@ -1,0 +1,9 @@
+version: '3.3'
+services:
+  streamlit-app:
+    build:
+      context: .  # Use o diretório atual como contexto para encontrar o Dockerfile
+    ports:
+      - "8501:8501"  # Mapeie a porta do container para a porta do host
+    volumes:
+      - ./app:/app  # Mapeie o diretório de código local para o diretório de trabalho no container
