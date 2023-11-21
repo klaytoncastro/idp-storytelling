@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Título do aplicativo
-st.title("Meu Aplicativo Streamlit com Colunas, Gráficos e Markdown")
+st.title("Meu Primeiro Aplicativo Streamlit")
 
 # Criar uma estrutura de duas colunas
 col1, col2 = st.columns(2)
