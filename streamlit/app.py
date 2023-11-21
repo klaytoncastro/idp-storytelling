@@ -1,9 +1,8 @@
 import streamlit as st
-import matplotlib.pyplot as plt
-import numpy as np
+import plotly.express as px
 
 # Título do aplicativo
-st.title("Meu Primeiro Aplicativo Streamlit")
+st.title("Meu Aplicativo Streamlit")
 
 # Criar uma estrutura de duas colunas
 col1, col2 = st.columns(2)
@@ -14,15 +13,12 @@ with col1:
     st.write("Esta é a primeira coluna com um gráfico de pizza.")
     
     # Dados para o gráfico de pizza
-    labels = ['Maçãs', 'Bananas', 'Laranjas']
-    sizes = [30, 45, 25]
-    fig_pie, ax_pie = plt.subplots()
-    ax_pie.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140)
+    data = {'Categorias': ['Maçãs', 'Bananas', 'Laranjas'], 'Valores': [30, 45, 25]}
+    df = pd.DataFrame(data)
     
-    # Configurar aspect ratio para tornar o gráfico de pizza circular
-    ax_pie.set_aspect('equal')
-    
-    st.pyplot(fig_pie)
+    # Criar um gráfico de pizza com o Plotly
+    fig_pie = px.pie(df, values='Valores', names='Categorias')
+    st.plotly_chart(fig_pie)
 
 # No segundo bloco de coluna
 with col2:
@@ -32,9 +28,8 @@ with col2:
     # Dados para o gráfico de barras
     categories = ['Categoria A', 'Categoria B', 'Categoria C', 'Categoria D']
     values = [10, 30, 20, 25]
-    fig_bar, ax_bar = plt.subplots()
-    ax_bar.bar(categories, values)
-    st.pyplot(fig_bar)
+    fig_bar = px.bar(x=categories, y=values)
+    st.plotly_chart(fig_bar)
 
 # Adicionar Markdown na seção 3
 st.header("Seção 3")
