@@ -16,8 +16,9 @@ with col1:
     # Dados para o gráfico de pizza
     labels = ['Maçãs', 'Bananas', 'Laranjas']
     sizes = [30, 45, 25]
-    plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140)
-    st.pyplot(plt)
+    fig_pie, ax_pie = plt.subplots()
+    ax_pie.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140)
+    st.pyplot(fig_pie)
 
 # No segundo bloco de coluna
 with col2:
@@ -27,8 +28,9 @@ with col2:
     # Dados para o gráfico de barras
     categories = ['Categoria A', 'Categoria B', 'Categoria C', 'Categoria D']
     values = [10, 30, 20, 25]
-    plt.bar(categories, values)
-    st.pyplot(plt)
+    fig_bar, ax_bar = plt.subplots()
+    ax_bar.bar(categories, values)
+    st.pyplot(fig_bar)
 
 # Adicionar Markdown na seção 3
 st.header("Seção 3")
